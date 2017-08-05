@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+  <title>school</title>
+</head>
+<body>
+  <div class="container" ng-controller="AppCtrl">
+    <h1>EXAM DETAILS</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>         
+          <th>STANDARD</th>
+          <th>MARKS</th>
+          <th>Action</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input class="form-control" ng-model="stud.id"></td>
+          <td><input class="form-control" ng-model="stud.name"></td>
+          <td><input class="form-control" ng-model="stud.standard"></td>
+          <td><input class="form-control" ng-model="stud.marks"></td>
+          <td><button class="btn btn-primary" ng-click="add()">Add</button></td>
+          <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+        </tr>
+        <tr ng-repeat="stud in students">
+          <td>{{stud.id}}</td>
+          <td>{{stud.name}}</td>
+          <td>{{stud.standard}}</td>
+          <td>{{stud.marks}}</td>
+          <td><button class="btn btn-danger" ng-click="remove(stud.id)">Remove</button></td>
+          <td><button class="btn btn-warning" ng-click="edit(stud.id)">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+<script src="../controllers/controller_stud.js"></script>
+</body>
+</html>
