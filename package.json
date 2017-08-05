@@ -4,6 +4,9 @@
     "keywords": ["util", "functional", "server", "client", "browser"],
     "author": "HP",
     "contributors": [],
+     "engines": {
+    "node": "6.11.0"
+  },
     "dependencies": {
          "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.13.1",
@@ -17,4 +20,5 @@
     "passport": "^0.2.2",
     "passport-local": "^1.0.0"
     }
+    
 }
