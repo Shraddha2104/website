@@ -62,7 +62,9 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 
-
+app.get('/', function(req, res) {
+    res.render('public_html/index.html'); // load the index.ejs file
+  });
 
 app.get('/students', function (req, res) {
   console.log('I received a GET request');
